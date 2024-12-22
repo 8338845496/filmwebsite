@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+   
+</head>
+<body>
+ 
+      <div class="topbar" style="background-color: #003b49;">
+        <div class="row align-items-center">
+            <!-- Left Section -->
+            <div class="col-md-3 d-flex align-items-center topbar-socials">
+                <a href="https://www.twitter.com/owa_training" target="_blank" rel="noreferrer">
+                    <i class="fa-brands fa-twitter" style="color: #aab8c2"></i>
+                </a>
+                <a href="https://www.facebook.com/profile.php?id=100092750890486" target="_blank">
+                    <i class="fa-brands fa-facebook" style="color: #316FF6;"></i>
+                </a>
+                <a href="https://www.linkedin.com/company/odisha-water-academy-bhubaneswar/" target="_blank">
+                    <i class="fa-brands fa-linkedin" style="color: #0077B5;"></i>
+                </a>
+                <a href="https://www.instagram.com/oua_odisha" target="_blank">
+                    <i class="fa-brands fa-instagram" style="color: #fa7e1e;"></i>
+                </a>
+            </div>
+    
+            <!-- Center Section -->
+            <div class="col-md-6 topbar-info text-center">
+                <a href="https://odisha.gov.in" target="_blank" style="color: whitesmoke;">Government of Odisha | ଓଡ଼ିଶା ସରକାର</a>
+                <br>
+                <span><i class="fa-solid fa-phone" style="color: #2dcd7c;"></i> +91-1234567899</span>
+            </div>
+    
+            <!-- Right Section -->
+            <div class="col-md-3 topbar-right d-flex justify-content-end">
+                <ul class="d-flex list-unstyled">
+                    <li><a href="#" id="toggleSearch" title="Site Search"><img src="img/ico-site-search.png" alt=""></a></li>
+                    <li><a href="/screen-reader" title="Screen Reader Access"><img loading="lazy" alt="Screen Reader Access" src="img/ico-skip.png"></a></li>
+                    <li><a class="fontincrease" title="Increase font size"><img src="img/screen-reader.png" alt=""></a></li>
+                    <li><a class="fontreset" title="Reset font size"><img src="img/ico-accessibility.png" alt=""></a></li>
+                    <li><a class="fontdecrease" title="Decrease font size"><img src="img/ico-sitemap.png" alt=""></a></li>
+                    <li><a href="#" title="Odia Decrease font size" style="color: white;">ଓଡିଆ</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <div class="d-flex justify-content-between align-items-center sticky-top bg-white shadow-sm px-3" id="headerbar">
+      <!-- Left Section: Logo -->
+      <div class="d-flex align-items-center" id="toplogo">
+          <a href="/">
+              <img src="img/logo-odisha.png" alt="Logo" class="img-fluid" />
+          </a>
+          <div id="logoname" class="ms-3">
+              <p class="fw-medium fs-5 m-0" style="color: #003b49;">Odisha Film Development <br> Corporation</p>
+          </div>
+      </div>
+  
+      <!-- Center Section: Navigation (Desktop) -->
+      <div class="d-none d-md-flex align-items-center" id="menuresponsive">
+          <ul class="nav mx-auto">
+              <li class="nav-item"><a class="nav-link" href="/Filmcity/home">Home</a></li>
+              <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-bs-toggle="dropdown" aria-expanded="false">About Us</a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                      <li><a class="dropdown-item" href="/Filmcity/about_filmcity">About Filmcity</a></li>
+                      <li><a class="dropdown-item" href="/Filmcity/filmcity_history">History of Filmcity</a></li>
+                      <li><a class="dropdown-item" href="/Filmcity/fact_file">Fact File</a></li>
+                      <li><a class="dropdown-item" href="/Filmcity/board_of_directors">Board of Directors</a></li>
+                      <li><a class="dropdown-item" href="/Filmcity/rti_act">RTI Act</a></li>
+                      <li><a class="dropdown-item" href="/Filmcity/environment_policy">Environmental Policy &amp; CSR</a></li>
+                  </ul>
+              </li>
+              <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-bs-toggle="dropdown" aria-expanded="false">Services</a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                      <li><a class="dropdown-item" href="/Filmcity/facilities">Facilities</a></li>
+                      <li><a class="dropdown-item" href="/Filmcity/cultural_contribution_fiscal_concession">Cultural Contribution &amp; Fiscal Concession</a></li>
+                      <li><a class="dropdown-item" href="/Filmcity/Template1/nmic-museum">NMIC Museum</a></li>
+                  </ul>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="/Filmcity/photo_gallery">Gallery</a></li>
+              <li class="nav-item"><a class="nav-link" href="/Filmcity/tenders">Tenders</a></li>
+              <li class="nav-item"><a class="nav-link" href="contactus.html">Contact Us</a></li>
+          </ul>
+      </div>
+  
+      <!-- Right Section -->
+      <div class="d-flex align-items-center">
+          <!-- Shri Mohan Charan Majhi Details -->
+          <div id="hcmresponsive" class="text-end d-none d-md-block me-3">
+              <strong>Shri Mohan Charan Majhi</strong>
+              <p class="mb-0" style="white-space: pre-line;">Hon'ble Chief Minister</p>
+          </div>
+          <img src="img/hcmodisha_1_a06cb6d8a7.png" alt="Image" id="header-image" class="img-fluid d-none d-md-block" style="width: 50px;" />
+          <!-- Mobile Toggle Button -->
+          <button class="btn btn-outline-primary d-md-none ms-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileNav" aria-controls="mobileNav">
+              <i class="fas fa-bars"></i>
+          </button>
+      </div>
+  </div>
+  
+  <!-- Offcanvas Menu for Mobile -->
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileNav" aria-labelledby="mobileNavLabel">
+      <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="mobileNavLabel">Menu</h5>
+          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+          <ul class="nav flex-column">
+              <li class="nav-item"><a class="nav-link" href="img//Filmcity/home">Home</a></li>
+              <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="mobileDropdown1" role="button" data-bs-toggle="dropdown" aria-expanded="false">About Us</a>
+                  <ul class="dropdown-menu" aria-labelledby="mobileDropdown1">
+                      <li><a class="dropdown-item" href="/Filmcity/about_filmcity">About Filmcity</a></li>
+                      <li><a class="dropdown-item" href="/Filmcity/filmcity_history">History of Filmcity</a></li>
+                      <li><a class="dropdown-item" href="/Filmcity/fact_file">Fact File</a></li>
+                  </ul>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="/Filmcity/photo_gallery">Gallery</a></li>
+              <li class="nav-item"><a class="nav-link" href="/Filmcity/contact_us">Contact Us</a></li>
+          </ul>
+          
+      </div>
+  </div>
+  
+  <!-- CSS -->
+  <style>
+      @media (max-width: 767px) {
+          #menuresponsive {
+              display: none;
+          }
+          #hcmresponsive img {
+              width: 40px;
+          }
+          #hcmresponsive {
+              display: flex;
+              align-items: center;
+          }
+      }
+  </style>
+    
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active ">
+            <img src="img/s-3.png" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-flex align-items-center justify-content-start text-start">
+              <div>
+                <h5 class="" style="margin-left: 40px; color: black; font-size: 1.8rem;">Captured memories, cherished forever.</h5>
+                <p class="" style="margin-left: 40px;  padding-bottom: 40px; font-size: 1.3rem;">Pictures capture memories, unlocking emotions and timeless stories.</p>
+                <div class="d-flex " style="margin-left: 10%;">
+                    <div class="d-flex regBtn">
+                       
+                        
+                      
+                        <a href="contactus.html" class="get-quote-btn mob-display-none" type="submit">
+                          Register <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    <div style="margin-left: 20px;">
+                        <a href="mio-2025-registration-form.php" class="get-quote-btn1 mob-display-none" type="submit">
+                            Book Location 
+                          </a>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="img/s-2 (1).png" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-flex align-items-center justify-content-start text-start">
+              <div>
+                <h5 class="" style="margin-left: 40px; color: black;font-size: 1.8rem;">Captured memories, cherished forever.</h5>
+                <p class="" style="margin-left: 40px; padding-bottom: 40px; font-size: 1.3rem;">Pictures capture memories, unlocking emotions and timeless stories.</p>
+                <div class="d-flex " style="margin-left: 10%;">
+                    <div class="d-flex regBtn">
+                       
+                        
+                      
+                        <a href="mio-2025-registration-form.php" class="get-quote-btn mob-display-none" type="submit">
+                          Register <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    <div style="margin-left: 20px;">
+                        <a href="mio-2025-registration-form.php" class="get-quote-btn1 mob-display-none" type="submit">
+                            Book Location 
+                          </a>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      
+      <div class="container">
+    
+<!-- testimonisl -->
+<section id="testimonials" style="background-image: url(shape-1.svg); background-repeat: no-repeat;">
+  <div class="container">
+    <div class="text-center">
+      <h2 style="color: #fa7e1e;">What Our Audiences Say</h2>
+      <p class="lead">Our films have touched hearts across the globe. Here's what some of our viewers had to say.</p>
+    </div>
+    <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
+      <div class="carousel-inner">
+        <!-- Card Group 1 -->
+        <div class="carousel-item active">
+          <div class="d-flex flex-row flex-nowrap overflow-x-auto">
+            <div class="col-md-4 mb-4" style="min-width: 300px;">
+              <div class="testimonial-card">
+                <div class="testimonial-content p-4 shadow-lg" style="border-radius: 10px; background-color: #fff;">
+                  <p class="testimonial-text">"A breathtaking experience! The storytelling and visuals were absolutely amazing. Can't wait to watch more films from the team!"</p>
+                  <div class="testimonial-author text-center mt-3">
+                    <img src="img/t-2.png" alt="Author Image" class="testimonial-author-img rounded-circle" style="width: 60px; height: 60px;">
+                    <h5 class="testimonial-author-name mt-2">Amit Kumar</h5>
+                    <p class="testimonial-author-role">Film Enthusiast</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mb-4" style="min-width: 300px;">
+              <div class="testimonial-card">
+                <div class="testimonial-content p-4 shadow-lg" style="border-radius: 10px; background-color: #fff;">
+                  <p class="testimonial-text">"The performances were top-notch. A cinematic journey that captivated my soul. Truly one of the best experiences I've had in a while."</p>
+                  <div class="testimonial-author text-center mt-3">
+                    <img src="img/t-1.png" alt="Author Image" class="testimonial-author-img rounded-circle" style="width: 60px; height: 60px;">
+                    <h5 class="testimonial-author-name mt-2">Priya Mishra</h5>
+                    <p class="testimonial-author-role">Movie Critic</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mb-4" style="min-width: 300px;">
+              <div class="testimonial-card">
+                <div class="testimonial-content p-4 shadow-lg" style="border-radius: 10px; background-color: #fff;">
+                  <p class="testimonial-text">"A powerful film that stayed with me long after it ended. The depth and emotion were conveyed so beautifully."</p>
+                  <div class="testimonial-author text-center mt-3">
+                    <img src="img/t-2.png" alt="Author Image" class="testimonial-author-img rounded-circle" style="width: 60px; height: 60px;">
+                    <h5 class="testimonial-author-name mt-2">Ravi Ranjan</h5>
+                    <p class="testimonial-author-role">Director</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Card Group 2 -->
+        <div class="carousel-item">
+          <div class="d-flex flex-row flex-nowrap overflow-x-auto">
+            <div class="col-md-4 mb-4" style="min-width: 300px;">
+              <div class="testimonial-card">
+                <div class="testimonial-content p-4 shadow-lg" style="border-radius: 10px; background-color: #fff;">
+                  <p class="testimonial-text">"An inspiring masterpiece that left me speechless. The team’s work is commendable."</p>
+                  <div class="testimonial-author text-center mt-3">
+                    <img src="img/t-2.png" alt="Author Image" class="testimonial-author-img rounded-circle" style="width: 60px; height: 60px;">
+                    <h5 class="testimonial-author-name mt-2">Simran Kaur</h5>
+                    <p class="testimonial-author-role">Actor</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mb-4" style="min-width: 300px;">
+              <div class="testimonial-card">
+                <div class="testimonial-content p-4 shadow-lg" style="border-radius: 10px; background-color: #fff;">
+                  <p class="testimonial-text">"A wonderful representation of life and emotions through cinema. Bravo!"</p>
+                  <div class="testimonial-author text-center mt-3">
+                    <img src="img/t-2.png" alt="Author Image" class="testimonial-author-img rounded-circle" style="width: 60px; height: 60px;">
+                    <h5 class="testimonial-author-name mt-2">Arjun Singh</h5>
+                    <p class="testimonial-author-role">Cinematographer</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mb-4" style="min-width: 300px;">
+              <div class="testimonial-card">
+                <div class="testimonial-content p-4 shadow-lg" style="border-radius: 10px; background-color: #fff;">
+                  <p class="testimonial-text">"Every frame was like a piece of art. I’m in awe of the talent behind this production."</p>
+                  <div class="testimonial-author text-center mt-3">
+                    <img src="img/t-2.png" alt="Author Image" class="testimonial-author-img rounded-circle" style="width: 60px; height: 60px;">
+                    <h5 class="testimonial-author-name mt-2">Neha Roy</h5>
+                    <p class="testimonial-author-role">Art Critic</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Carousel Controls -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    
+  </div>
+</section>
+
+
+  
+
+<!-- welcome -->
+<!-- <div class="film-permission-section" id="film-permission">
+    <div class="container">
+        <div class="section-title text-center">
+            <h2 style="color: #fa7e1e;">PROCEDURE FOR PERMISSION OF FILM MAKING IN Odisha</h2>
+        </div>
+        <div class="clearfix"></div>
+        <p class="text-center permission-description wow fadeInUp" id="permission-description">
+            Odisha Film Eco System set up by UT of Odisha as a facilitation point for the film producers and production companies to get requisite permission, guide and inform the film makers on shooting locations and the facilities available in Odisha.
+        </p>
+        <div class="row">
+            <div class="col-md-6">
+                <img src="man-taking-photo-his-girlfriend-with-retro-camera (1).png" alt="Camera Stand" class="film-img wow slideInLeft" id="camera-img">
+            </div>
+            <div class="col-md-6">
+                <ul class="list-unstyled mt-top" id="procedure-list">
+                    <li class="wow slideInRight" id="user-registration">
+                        <div class="step-icon">
+                            <i class="fa fa-user"></i>
+                        </div>
+                        <div class="step-content">
+                            <h3>USER REGISTRATION</h3>
+                            <p>Create your account on JKFDC portal to start your application process.</p>
+                        </div>
+                        <div class="clearfix"></div>
+                    </li>
+                    <li class="wow slideInRight" id="fill-application-form">
+                        <div class="step-icon">
+                            <i class="fa fa-user"></i>
+                        </div>
+                        <div class="step-content">
+                            <h3>Create Project Profile</h3>
+                            <p>Fill out the application form and all the mandatory details.</p>
+                        </div>
+                        <div class="clearfix"></div>
+                    </li>
+                    <li class="wow slideInRight" id="fill-application-form">
+                        <div class="step-icon">
+                            <i class="fa fa-user"></i>
+                        </div>
+                        <div class="step-content">
+                            <h3>FILL COMMON APPLICATION FORM</h3>
+                            <p>Fill out the application form and all the mandatory details.</p>
+                        </div>
+                        <div class="clearfix"></div>
+                    </li>
+                    <li class="wow slideInRight" id="add-location">
+                        <div class="step-icon">
+                            <i class="fa fa-map-marker"></i>
+                        </div>
+                        <div class="step-content">
+                            <h3>ADD LOCATION</h3>
+                            <p>Fill in location details, time and date of shooting.</p>
+                        </div>
+                        <div class="clearfix"></div>
+                    </li>
+                    <li class="wow slideInRight" id="upload-documents">
+                        <div class="step-icon">
+                            <i class="fa fa-upload"></i>
+                        </div>
+                        <div class="step-content">
+                            <h3>UPLOAD DOCUMENTS</h3>
+                            <p>Attach all the documents specified in the application form.</p>
+                        </div>
+                        <div class="clearfix"></div>
+                    </li>
+                    <li class="wow slideInRight" id="terms-conditions">
+                        <div class="step-icon">
+                            <i class="fa fa-asterisk"></i>
+                        </div>
+                        <div class="step-content">
+                            <h3>TERMS &amp; CONDITION</h3>
+                            <p>Accept Terms &amp; Conditions specified by JKFDC and stakeholder departments.</p>
+                        </div>
+                        <div class="clearfix"></div>
+                    </li>
+                    <li class="wow slideInRight" id="pay-fees">
+                        <div class="step-icon">
+                            <i class="fa fa-credit-card"></i>
+                        </div>
+                        <div class="step-content">
+                            <h3>PAY FEES</h3>
+                            <p>An application fee to be paid online, to enable submission of your application.</p>
+                        </div>
+                        <div class="clearfix"></div>
+                    </li>
+                    <li class="wow slideInRight" id="submit-application">
+                        <div class="step-icon">
+                            <i class="fa fa-sign-in"></i>
+                        </div>
+                        <div class="step-content">
+                            <h3>SUBMIT APPLICATION FORM</h3>
+                            <p>Submit the form on the web application.</p>
+                        </div>
+                        <div class="clearfix"></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+      <!-- location -->
+
+      <section class="container">
+        <div class="section-title text-center">
+          <h2 style="color: #fa7e1e;">Location Directory</h2>
+        </div>
+        <div class="clearfix"></div>
+        <p class="text-center permission-description wow fadeInUp" id="permission-description">
+          Odisha Film Eco System set up by UT of Odisha as a facilitation point for the film producers and production companies to get requisite permission, guide and inform the filmmakers on shooting locations and the facilities available in Odisha.
+        </p>
+        <div id="locationCarousel" class="carousel slide mt-5" data-bs-ride="carousel" data-bs-interval="2000">
+          <div class="carousel-inner">
+            <!-- Slide 1 -->
+            <div class="carousel-item active">
+              <div class="d-flex flex-row flex-nowrap overflow-x-auto">
+                <div class="col-md-4 col-sm-6 mb-4" style="min-width: 300px;">
+                  <div class="service-box position-relative d-flex flex-column h-100">
+                    <div class="service-thumb">
+                      <img src="img/koraput.webp" alt="Koraput" class="img-fluid rounded" style="width: 100%; height: 200px; object-fit: cover;">
+                    </div>
+                    <div class="service-content text-center mt-3 flex-grow-1 d-flex flex-column">
+                      <h4 class="service-title mb-auto">
+                        <a href="http://localhost/moviesite/services/service-details/">KORAPUT <br> (କୋରାପୁଟ)</a>
+                      </h4>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-6 mb-4" style="min-width: 300px;">
+                  <div class="service-box position-relative d-flex flex-column h-100">
+                    <div class="service-thumb">
+                      <img src="img/puri.jpg" alt="Puri" class="img-fluid rounded" style="width: 100%; height: 200px; object-fit: cover;">
+                    </div>
+                    <div class="service-content text-center mt-3 flex-grow-1 d-flex flex-column">
+                      <h4 class="service-title mb-auto">
+                        <a href="http://localhost/moviesite/services/service-details/">PURI <br> (ପୁରୀ)</a>
+                      </h4>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-6 mb-4" style="min-width: 300px;">
+                  <div class="service-box position-relative d-flex flex-column h-100">
+                    <div class="service-thumb">
+                      <img src="img/bbsr.jpg" alt="Bhubaneswar" class="img-fluid rounded" style="width: 100%; height: 200px; object-fit: cover;">
+                    </div>
+                    <div class="service-content text-center mt-3 flex-grow-1 d-flex flex-column">
+                      <h4 class="service-title mb-auto">
+                        <a href="http://localhost/moviesite/services/service-details/">BHUBANESWAR <br> (ଭୁବନେଶ୍ବର)</a>
+                      </h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Slide 2 -->
+            <div class="carousel-item">
+              <div class="d-flex flex-row flex-nowrap overflow-x-auto">
+                <div class="col-md-4 col-sm-6 mb-4" style="min-width: 300px;">
+                  <div class="service-box position-relative d-flex flex-column h-100">
+                    <div class="service-thumb">
+                      <img src="img/myur.jpg" alt="Mayurbhanj" class="img-fluid rounded" style="width: 100%; height: 200px; object-fit: cover;">
+                    </div>
+                    <div class="service-content text-center mt-3 flex-grow-1 d-flex flex-column">
+                      <h4 class="service-title mb-auto">
+                        <a href="http://localhost/moviesite/services/service-details/">MAYURBHANJ <br> (ମୟୁରଭଞ୍ଜ)</a>
+                      </h4>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-6 mb-4" style="min-width: 300px;">
+                  <div class="service-box position-relative d-flex flex-column h-100">
+                    <div class="service-thumb">
+                      <img src="img/keonjhar.jpg" alt="Jagannath Temple" class="img-fluid rounded" style="width: 100%; height: 200px; object-fit: cover;">
+                    </div>
+                    <div class="service-content text-center mt-3 flex-grow-1 d-flex flex-column">
+                      <h4 class="service-title mb-auto">
+                        <a href="http://localhost/moviesite/services/service-details/">Keonjhar<br> (କେନ୍ଦୁଝର)</a>
+                      </h4>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-6 mb-4" style="min-width: 300px;">
+                  <div class="service-box position-relative d-flex flex-column h-100">
+                    <div class="service-thumb">
+                      <img src="img/chilika.jpg" alt="Chilika Lake" class="img-fluid rounded" style="width: 100%; height: 200px; object-fit: cover;">
+                    </div>
+                    <div class="service-content text-center mt-3 flex-grow-1 d-flex flex-column">
+                      <h4 class="service-title mb-auto">
+                        <a href="http://localhost/moviesite/services/service-details/">CHILIKA LAKE <br> (ଚିଲିକା ଝିଲା)</a>
+                      </h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Carousel Controls -->
+          <button class="carousel-control-prev" type="button" data-bs-target="#locationCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#locationCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        
+        <!-- View More Button -->
+        <div class="view-more-btn text-center mt-4">
+          <a href="viewmorelocation.html" class="get-quote-btn mob-display-none" type="submit">
+            View More Locations <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </section>
+      
+      
+      
+      
+      
+      <section class="">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6" >
+                    <h2 class="mb-4" style="color: #fa7e1e;" >About Us</h2>
+                    <p>Odisha Film Development Corporation (OFDC) is a pioneering organization dedicated to promoting, supporting, and fostering the growth of the film industry in Odisha. Established in [Insert Year], OFDC serves as a cornerstone for filmmakers, artists, and the creative community, ensuring that the rich cultural heritage of Odisha is showcased on the big screen.</p>
+                    <p>At OFDC, our mission is to empower filmmakers by providing the necessary resources, infrastructure, and financial support to create high-quality cinema that resonates with audiences worldwide. We aim to spotlight Odisha's unique stories, languages, and landscapes through the powerful medium of film.</p>
+                </div>
+                <div class="col-md-6 mt-5">
+                    <div class="row g-3">
+                        <div class="col-6">
+                            <img src="img/WhatsApp Image 2024-12-13 at 10.06.15 PM.jpeg" alt="Locksmith" class="img-fluid rounded same-size">
+                        </div>
+                        <div class="col-6">
+                            <img src="img/wpimg.jpeg" alt="Locksmith" class="img-fluid rounded same-size">
+                        </div>
+                        <div class="col-6">
+                            <img src="img/wpimg.jpeg" alt="Locksmith" class="img-fluid rounded same-size">
+                        </div>
+                        <div class="col-6">
+                            <img src="img/WhatsApp Image 2024-12-13 at 10.06.15 PM.jpeg" alt="Locksmith" class="img-fluid rounded same-size">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+  <!-- eqip -->
+  <div class="container my-5">
+    <h2 class="text-center" style="color: #fa7e1e;">Equipment Directory</h2>
+    <div id="equipmentCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
+      <div class="carousel-inner">
+        <!-- Slide 1 -->
+        <div class="carousel-item active">
+          <div class="d-flex flex-row flex-nowrap overflow-x-auto">
+            <div class="col-md-4 mb-4" style="min-width: 300px;">
+              <div class="equipment-item">
+                <img src="img/DeWatermark.ai_1734607641276.png" alt="Camera" class="equipment-image">
+                <div class="equipment-info">
+                  <h5 class="equipment-title">Camera</h5>
+                  <p class="equipment-description">Find high-quality cameras for film production.</p>
+                </div>
+                <span class="date-badge">Updated: 2024-12-19</span>
+              </div>
+            </div>
+            <div class="col-md-4 mb-4" style="min-width: 300px;">
+              <div class="equipment-item">
+                <img src="img/light.png" alt="Lighting" class="equipment-image">
+                <div class="equipment-info">
+                  <h5 class="equipment-title">Lighting</h5>
+                  <p class="equipment-description">Explore professional lighting equipment.</p>
+                </div>
+                <span class="date-badge">Updated: 2024-12-19</span>
+              </div>
+            </div>
+            <div class="col-md-4 mb-4" style="min-width: 300px;">
+              <div class="equipment-item">
+                <img src="img/audio.png" alt="Audio" class="equipment-image">
+                <div class="equipment-info">
+                  <h5 class="equipment-title">Audio</h5>
+                  <p class="equipment-description">Discover premium audio recording gear.</p>
+                </div>
+                <span class="date-badge">Updated: 2024-12-19</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Slide 2 -->
+        <div class="carousel-item">
+          <div class="d-flex flex-row flex-nowrap overflow-x-auto">
+            <div class="col-md-4 mb-4" style="min-width: 300px;">
+              <div class="equipment-item">
+                <img src="img/photoshoot accessories like camera location  1.jpg" alt="Accessories" class="equipment-image">
+                <div class="equipment-info">
+                  <h5 class="equipment-title">Accessories</h5>
+                  <p class="equipment-description">Browse essential film production accessories.</p>
+                </div>
+                <span class="date-badge">Updated: 2024-12-19</span>
+              </div>
+            </div>
+            <div class="col-md-4 mb-4" style="min-width: 300px;">
+              <div class="equipment-item">
+                <img src="img/photoshoot accessories like camera location  1.jpg" alt="Accessories" class="equipment-image">
+                <div class="equipment-info">
+                  <h5 class="equipment-title">Accessories</h5>
+                  <p class="equipment-description">Browse essential film production accessories.</p>
+                </div>
+                <span class="date-badge">Updated: 2024-12-19</span>
+              </div>
+            </div>
+            <div class="col-md-4 mb-4" style="min-width: 300px;">
+              <div class="equipment-item">
+                <img src="img/photoshoot accessories like camera location  1.jpg" alt="Accessories" class="equipment-image">
+                <div class="equipment-info">
+                  <h5 class="equipment-title">Accessories</h5>
+                  <p class="equipment-description">Browse essential film production accessories.</p>
+                </div>
+                <span class="date-badge">Updated: 2024-12-19</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Carousel Controls -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#equipmentCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#equipmentCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    
+
+    <!-- View More Button -->
+    <div class="view-more-btn text-center mt-4">
+      <a href="viewmore.html" class="get-quote-btn mob-display-none" type="submit">
+        View More <i class="fas fa-arrow-right"></i>
+      </a>
+    </div>
+  </div>
+    <!-- Main Content -->
+   
+</div>
+
+  <section class="important-commu communication-section bg-dark text-white" style="background-image: url(imp.jpeg);">
+    <div class="important-overlay py-5">
+        <div class="container">
+            <h2 class="text-center ttl-main display-4">
+                <span class="ttl-span" style="color: #fa7e1e;">Important Communication</span>
+            </h2>
+            <div class="row justify-content-center pt-5">
+                <div class="col-md-8">
+                    <div class="pagination d-flex justify-content-center gap-3" id="tab_IC">
+                        <div class="tab-sec tab_4 text-center active" id="film_class" onclick="activeImportant(4)">
+                            <h6 class="m-0 font-weight-bold fs-4">FILM FRATERNITY</h6>
+                        </div>
+                        <div class="tab-sec tab_3 text-center" id="general_class" onclick="activeImportant(3)">
+                            <h6 class="m-0 font-weight-bold fs-4">GENERAL PUBLIC / VIEWERS</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="imp_slider_div pt-5">
+                <div id="film_fraternity" class="d-block">
+                    <div class="row justify-content-center">
+                        <div class="col-md-12 text-center py-5">
+                            <div class="main-slider">
+                                <div class="our-slider">
+                                    <!-- Slider content goes here -->
+                                    <div class="slide-img">
+                                        <p>
+                                            <a href="./assets/pdf/Advisory_on_Online_Betting.pdf" target="_blank" class="btn btn-outline-light">
+                                                Ministry of I&amp;B’s Advisory regarding Online betting
+                                                <img src="" alt="pdf" class="ms-2">
+                                            </a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="view-more-btn text-center">
+                        <a href="mio-2025-registration-form.php" class="get-quote-btn mob-display-none" type="submit">
+                           view more <i class="fas fa-arrow-right"></i>
+                          </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="faq-section bg-light" >
+    <div class="container">
+        <h2 class="text-center display-4 fw-bold " style="color: #fa7e1e;">Frequently Asked Questions</h2>
+        <div class="accordion" id="faqAccordion">
+            <!-- FAQ Item 1 -->
+            <div class="accordion-item shadow-lg rounded mb-4">
+                <h2 class="accordion-header" id="headingOne" >
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" >
+                        What is your return policy?
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Our return policy lasts 30 days. If 30 days have gone by since your purchase, unfortunately, we can’t offer you a refund or exchange.
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Item 2 -->
+            <div class="accordion-item shadow-lg rounded mb-4">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        How can I track my order?
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Once your order is shipped, you will receive an email with a tracking number and a link to track your package.
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Item 3 -->
+            <div class="accordion-item shadow-lg rounded mb-4">
+                <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Do you offer international shipping?
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Yes, we offer international shipping to most countries. Shipping fees and delivery times vary depending on your location.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="container mb-3">
+  <h2 class="text-center mb-4" style="color: #fa7e1e;">Odisha Film Development Corporation Gallery</h2>
+  <div class="row">
+      <div class="col-md-4">
+          <div class="card modern-card">
+              <img src="img/Leonardo_Kino_XL_give_me_random_indian_people_heroic_person_wi_1.jpg" class="card-img-top" alt="Card Image">
+              <div class="card-body">
+                  <h5 class="card-title">Odisha Cinema 1</h5>
+                  <p class="card-text">Discover the richness of Odia cinema, a fusion of tradition and modern storytelling.</p>
+                  <a href="mio-2025-registration-form.php" class="get-quote-btn mob-display-none">
+                      Explore <i class="fas fa-arrow-right"></i>
+                  </a>
+              </div>
+          </div>
+      </div>
+      <div class="col-md-4">
+          <div class="card modern-card">
+              <img src="img/Leonardo_Kino_XL_give_me_random_indian_people_heroic_person_wi_3.jpg" class="card-img-top" alt="Card Image">
+              <div class="card-body">
+                  <h5 class="card-title">Odisha Cinema 2</h5>
+                  <p class="card-text">Experience the colorful culture and landscapes of Odisha through the lens of local filmmakers.</p>
+                  <a href="mio-2025-registration-form.php" class="get-quote-btn mob-display-none">
+                      Explore <i class="fas fa-arrow-right"></i>
+                  </a>
+              </div>
+          </div>
+      </div>
+      <div class="col-md-4">
+          <div class="card modern-card">
+              <img src="img/Leonardo_Kino_XL_give_me_random_indian_people_heroic_person_wi_1.jpg" class="card-img-top" alt="Card Image">
+              <div class="card-body">
+                  <h5 class="card-title">Odisha Cinema 3</h5>
+                  <p class="card-text">Step into the world of Odia cinema, where stories of love, drama, and culture come alive.</p>
+                  <a href="mio-2025-registration-form.php" class="get-quote-btn mob-display-none">
+                      Explore <i class="fas fa-arrow-right"></i>
+                  </a>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+    
+</div>
+<footer class="footer">
+
+  
+  
+    <div class="container">
+  
+      <div class="row">
+  
+        <div class="col-md-4">
+          <div class="footerLogo">
+              <a href="">
+                <img src="img/logo-odisha.png" alt="Logo" class="img-fluid" style="background-color: white;" />
+              </a>
+              <div class="makefdata">The <i>Odisha Film Development Corporation– Make in Odisha Conclave 2025</i> is the premier investment forum in East India, designed to drive economic growth and elevate Odisha as a globally competitive investment destination...<a href="mio-2025.php">Read more</a></div>
+          </div>
+        </div>
+  
+        <div class="col-md-4 mobmb-40">
+          <h5 class="footer-header">Quick Links</h5>
+          <ul class="footerMenuList">
+            <li><a href="about-odisha.php"><i class="fa fa-caret-right"></i> About Odisha</a></li>
+            <!-- <li><a href="why-odisha.php"><i class="fa fa-caret-right"></i> Why Odisha</a></li> -->
+            <li><a href="investor-meets.php"><i class="fa fa-caret-right"></i> Investor Meets</a></li>
+            <li><a href="investment-intention.php"><i class="fa fa-caret-right"></i> Investment Intention</a></li>
+            <li><a href="schedule-a-meeting.php"><i class="fa fa-caret-right"></i> Schedule a Meeting </a></li>
+            <li><a href="focus-sectors.php"><i class="fa fa-caret-right"></i> Explore Sectors </a></li>
+            <li><a href="mio-2025.php"><i class="fa fa-caret-right"></i> MIO 2025 </a></li>
+            <li><a href="mio-2025-schedule.php"><i class="fa fa-caret-right"></i> MIO 2025 Schedule</a></li>
+            <li><a href="brochure.pdf" target="_blanck"><i class="fa fa-caret-right"></i> Brochure</a></li>
+            
+            
+          </ul>
+        </div>
+  
+        <div class="col-md-4 mobmb-40">
+          <h5 class="footer-header">Odisha Film Development Corporation - Make in Odisha 2025 venue:</h5>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3741.840502688744!2d85.82275380000002!3d20.306867999999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a19090031f3984d%3A0xc11a74ad160ad69e!2sMIO%202025!5e0!3m2!1sen!2sin!4v1732086661032!5m2!1sen!2sin" width="100%" height="230" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <div class="socialFtrIcon">
+            <a href="https://x.com/InvestInOdisha" target="_blanck">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+            <a href="https://www.linkedin.com/company/investodisha" target="_blanck">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://www.instagram.com/investinodisha/" target="_blanck">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://www.facebook.com/InvestOdisha/" target="_blanck">
+              <i class="fa-brands fa-facebook"></i>
+            </a>
+          </div>
+        </div>
+  
+      </div>
+      <section class="bottomFooter">
+          <div class="row">
+            <div class="col-md-12"><hr></div>
+            <div class="col-md-6 footerLeft">Copyright ©2025 <a href="index.php">Odisha Film Development Corporation</a>, All Rights Reserved.</div>
+            <div class="col-md-6 footerRight">
+              Website Visitor Count : <span id="visitorCount">6833</span>
+            </div>
+          </div>
+      </section>
+    </div>
+  </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

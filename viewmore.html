@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View More - Equipment Directory</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-color: #f9f9f9;
+        }
+        .card {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border: none;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+        .card:hover {
+            transform: scale(1.05);
+        }
+        .card-img-top {
+            height: 200px;
+            object-fit: cover;
+        }
+        .search-bar {
+            background-color: #fff;
+            padding: 10px 20px;
+            border-radius: 50px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border: 1px solid #ddd;
+        }
+        .btn-primary {
+            background-color: #fa7e1e;
+            border-color: #fa7e1e;
+        }
+        .btn-primary:hover {
+            background-color: #d46919;
+        }
+    </style>
+</head>
+<body>
+    <div class="topbar" style="background-color: #003b49;">
+        <div class="row align-items-center">
+            <!-- Left Section -->
+            <div class="col-md-3 d-flex align-items-center topbar-socials">
+                <a href="https://www.twitter.com/owa_training" target="_blank" rel="noreferrer">
+                    <i class="fa-brands fa-twitter" style="color: #aab8c2"></i>
+                </a>
+                <a href="https://www.facebook.com/profile.php?id=100092750890486" target="_blank">
+                    <i class="fa-brands fa-facebook" style="color: #316FF6;"></i>
+                </a>
+                <a href="https://www.linkedin.com/company/odisha-water-academy-bhubaneswar/" target="_blank">
+                    <i class="fa-brands fa-linkedin" style="color: #0077B5;"></i>
+                </a>
+                <a href="https://www.instagram.com/oua_odisha" target="_blank">
+                    <i class="fa-brands fa-instagram" style="color: #fa7e1e;"></i>
+                </a>
+            </div>
+    
+            <!-- Center Section -->
+            <div class="col-md-6 topbar-info text-center">
+                <a href="https://odisha.gov.in" target="_blank" style="color: whitesmoke;">Government of Odisha | ଓଡ଼ିଶା ସରକାର</a>
+                <br>
+                <span><i class="fa-solid fa-phone" style="color: #2dcd7c;"></i> +91-1234567899</span>
+            </div>
+    
+            <!-- Right Section -->
+            <div class="col-md-3 topbar-right d-flex justify-content-end">
+                <ul class="d-flex list-unstyled">
+                    <li><a href="#" id="toggleSearch" title="Site Search"><img src="img/ico-site-search.png" alt=""></a></li>
+                    <li><a href="/screen-reader" title="Screen Reader Access"><img loading="lazy" alt="Screen Reader Access" src="img/ico-skip.png"></a></li>
+                    <li><a class="fontincrease" title="Increase font size"><img src="img/screen-reader.png" alt=""></a></li>
+                    <li><a class="fontreset" title="Reset font size"><img src="img/ico-accessibility.png" alt=""></a></li>
+                    <li><a class="fontdecrease" title="Decrease font size"><img src="img/ico-sitemap.png" alt=""></a></li>
+                    <li><a href="#" title="Odia Decrease font size" style="color: white;">ଓଡିଆ</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <div class="d-flex justify-content-between align-items-center sticky-top bg-white shadow-sm px-3" id="headerbar">
+      <!-- Left Section: Logo -->
+      <div class="d-flex align-items-center" id="toplogo">
+          <a href="/">
+              <img src="img/logo-odisha.png" alt="Logo" class="img-fluid" />
+          </a>
+          <div id="logoname" class="ms-3">
+              <p class="fw-medium fs-5 m-0" style="color: #003b49;">Odisha Film Development <br> Corporation</p>
+          </div>
+      </div>
+  
+      <!-- Center Section: Navigation (Desktop) -->
+      <div class="d-none d-md-flex align-items-center" id="menuresponsive">
+          <ul class="nav mx-auto">
+              <li class="nav-item"><a class="nav-link" href="/Filmcity/home">Home</a></li>
+              <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-bs-toggle="dropdown" aria-expanded="false">About Us</a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                      <li><a class="dropdown-item" href="/Filmcity/about_filmcity">About Filmcity</a></li>
+                      <li><a class="dropdown-item" href="/Filmcity/filmcity_history">History of Filmcity</a></li>
+                      <li><a class="dropdown-item" href="/Filmcity/fact_file">Fact File</a></li>
+                      <li><a class="dropdown-item" href="/Filmcity/board_of_directors">Board of Directors</a></li>
+                      <li><a class="dropdown-item" href="/Filmcity/rti_act">RTI Act</a></li>
+                      <li><a class="dropdown-item" href="/Filmcity/environment_policy">Environmental Policy &amp; CSR</a></li>
+                  </ul>
+              </li>
+              <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-bs-toggle="dropdown" aria-expanded="false">Services</a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                      <li><a class="dropdown-item" href="/Filmcity/facilities">Facilities</a></li>
+                      <li><a class="dropdown-item" href="/Filmcity/cultural_contribution_fiscal_concession">Cultural Contribution &amp; Fiscal Concession</a></li>
+                      <li><a class="dropdown-item" href="/Filmcity/Template1/nmic-museum">NMIC Museum</a></li>
+                  </ul>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="/Filmcity/photo_gallery">Gallery</a></li>
+              <li class="nav-item"><a class="nav-link" href="/Filmcity/tenders">Tenders</a></li>
+              <li class="nav-item"><a class="nav-link" href="contactus.html">Contact Us</a></li>
+          </ul>
+      </div>
+  
+      <!-- Right Section -->
+      <div class="d-flex align-items-center">
+          <!-- Shri Mohan Charan Majhi Details -->
+          <div id="hcmresponsive" class="text-end d-none d-md-block me-3">
+              <strong>Shri Mohan Charan Majhi</strong>
+              <p class="mb-0" style="white-space: pre-line;">Hon'ble Chief Minister</p>
+          </div>
+          <img src="img/hcmodisha_1_a06cb6d8a7.png" alt="Image" id="header-image" class="img-fluid d-none d-md-block" style="width: 50px;" />
+          <!-- Mobile Toggle Button -->
+          <button class="btn btn-outline-primary d-md-none ms-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileNav" aria-controls="mobileNav">
+              <i class="fas fa-bars"></i>
+          </button>
+      </div>
+  </div>
+  
+  <!-- Offcanvas Menu for Mobile -->
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileNav" aria-labelledby="mobileNavLabel">
+      <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="mobileNavLabel">Menu</h5>
+          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+          <ul class="nav flex-column">
+              <li class="nav-item"><a class="nav-link" href="/Filmcity/home">Home</a></li>
+              <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="mobileDropdown1" role="button" data-bs-toggle="dropdown" aria-expanded="false">About Us</a>
+                  <ul class="dropdown-menu" aria-labelledby="mobileDropdown1">
+                      <li><a class="dropdown-item" href="/Filmcity/about_filmcity">About Filmcity</a></li>
+                      <li><a class="dropdown-item" href="/Filmcity/filmcity_history">History of Filmcity</a></li>
+                      <li><a class="dropdown-item" href="/Filmcity/fact_file">Fact File</a></li>
+                  </ul>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="/Filmcity/photo_gallery">Gallery</a></li>
+              <li class="nav-item"><a class="nav-link" href="/Filmcity/contact_us">Contact Us</a></li>
+          </ul>
+          
+      </div>
+  </div>
+  
+  <!-- CSS -->
+  <style>
+      @media (max-width: 767px) {
+          #menuresponsive {
+              display: none;
+          }
+          #hcmresponsive img {
+              width: 40px;
+          }
+          #hcmresponsive {
+              display: flex;
+              align-items: center;
+          }
+      }
+  </style>
+<div class="container my-5">
+    <!-- Header -->
+    <h2 class="text-center mb-4" style="color: #fa7e1e;">Explore More Equipment</h2>
+
+    <!-- Search and Filter Section -->
+    <div class="row mb-4">
+        <div class="col-md-8">
+            <input type="text" class="form-control search-bar" placeholder="Search for equipment...">
+        </div>
+      
+    </div>
+
+    <!-- Equipment Cards -->
+    <div class="row">
+        <!-- Card 1 -->
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="img/DeWatermark.ai_1734607641276.png" class="card-img-top" alt="Camera">
+                <div class="card-body">
+                    <h5 class="card-title">High-Quality Camera</h5>
+                    <p class="card-text">Perfect for film production and photography.</p>
+                    <a href="#" class="btn btn-primary">View Details</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="img/light.png" class="card-img-top" alt="Lighting">
+                <div class="card-body">
+                    <h5 class="card-title">Professional Lighting</h5>
+                    <p class="card-text">Enhance your production with quality lighting.</p>
+                    <a href="#" class="btn btn-primary">View Details</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="img/audio.png" class="card-img-top" alt="Audio">
+                <div class="card-body">
+                    <h5 class="card-title">Premium Audio Gear</h5>
+                    <p class="card-text">Capture high-quality sound for your projects.</p>
+                    <a href="#" class="btn btn-primary">View Details</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="img/audio.png" class="card-img-top" alt="Accessories">
+                <div class="card-body">
+                    <h5 class="card-title">Film Accessories</h5>
+                    <p class="card-text">Browse essential film production accessories.</p>
+                    <a href="#" class="btn btn-primary">View Details</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="img/audio.png" class="card-img-top" alt="Accessories">
+                <div class="card-body">
+                    <h5 class="card-title">Lighting Accessories</h5>
+                    <p class="card-text">Find lighting equipment to complement your setup.</p>
+                    <a href="#" class="btn btn-primary">View Details</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="img/light.png" class="card-img-top" alt="Accessories">
+                <div class="card-body">
+                    <h5 class="card-title">Sound Gear</h5>
+                    <p class="card-text">Discover high-quality sound gear for professional results.</p>
+                    <a href="#" class="btn btn-primary">View Details</a>
+                </div>
+            </div>
+        </div>
+
+    </div> <!-- End of Equipment Cards -->
+
+</div>
+<footer class="footer">
+
+  
+  
+    <div class="container">
+  
+      <div class="row">
+  
+        <div class="col-md-4">
+          <div class="footerLogo">
+              <a href="">
+                <img src="img/logo-odisha.png" alt="Logo" class="img-fluid" style="background-color: white;" />
+              </a>
+              <div class="makefdata">The <i>Odisha Film Development Corporation– Make in Odisha Conclave 2025</i> is the premier investment forum in East India, designed to drive economic growth and elevate Odisha as a globally competitive investment destination...<a href="mio-2025.php">Read more</a></div>
+          </div>
+        </div>
+  
+        <div class="col-md-4 mobmb-40">
+          <h5 class="footer-header">Quick Links</h5>
+          <ul class="footerMenuList">
+            <li><a href="about-odisha.php"><i class="fa fa-caret-right"></i> About Odisha</a></li>
+            <!-- <li><a href="why-odisha.php"><i class="fa fa-caret-right"></i> Why Odisha</a></li> -->
+            <li><a href="investor-meets.php"><i class="fa fa-caret-right"></i> Investor Meets</a></li>
+            <li><a href="investment-intention.php"><i class="fa fa-caret-right"></i> Investment Intention</a></li>
+            <li><a href="schedule-a-meeting.php"><i class="fa fa-caret-right"></i> Schedule a Meeting </a></li>
+            <li><a href="focus-sectors.php"><i class="fa fa-caret-right"></i> Explore Sectors </a></li>
+            <li><a href="mio-2025.php"><i class="fa fa-caret-right"></i> MIO 2025 </a></li>
+            <li><a href="mio-2025-schedule.php"><i class="fa fa-caret-right"></i> MIO 2025 Schedule</a></li>
+            <li><a href="brochure.pdf" target="_blanck"><i class="fa fa-caret-right"></i> Brochure</a></li>
+            
+            
+          </ul>
+        </div>
+  
+        <div class="col-md-4 mobmb-40">
+          <h5 class="footer-header">Odisha Film Development Corporation - Make in Odisha 2025 venue:</h5>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3741.840502688744!2d85.82275380000002!3d20.306867999999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a19090031f3984d%3A0xc11a74ad160ad69e!2sMIO%202025!5e0!3m2!1sen!2sin!4v1732086661032!5m2!1sen!2sin" width="100%" height="230" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <div class="socialFtrIcon">
+            <a href="https://x.com/InvestInOdisha" target="_blanck">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+            <a href="https://www.linkedin.com/company/investodisha" target="_blanck">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://www.instagram.com/investinodisha/" target="_blanck">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://www.facebook.com/InvestOdisha/" target="_blanck">
+              <i class="fa-brands fa-facebook"></i>
+            </a>
+          </div>
+        </div>
+  
+      </div>
+      <section class="bottomFooter">
+          <div class="row">
+            <div class="col-md-12"><hr></div>
+            <div class="col-md-6 footerLeft">Copyright ©2025 <a href="index.php">Odisha Film Development Corporation</a>, All Rights Reserved.</div>
+            <div class="col-md-6 footerRight">
+              Website Visitor Count : <span id="visitorCount">6833</span>
+            </div>
+          </div>
+      </section>
+    </div>
+  </footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
